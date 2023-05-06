@@ -1,5 +1,4 @@
 import axios from "axios";
-import React from "react";
 import { toast } from "sonner";
 
 const useLogin = async (email, password) => {
