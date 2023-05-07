@@ -10,6 +10,7 @@ const SideNav = ({ open }) => {
           ? "gap-20 flex flex-col items-center pt-[50px] h-screen w-[70%] bg-white z-10 absolute duration-[0.7s] shadow-[0px_150px_200px_0_rgba(0,0,0)]"
           : "gap-20 flex flex-col items-center pt-[50px] h-screen w-[70%] bg-white z-10 absolute translate-x-[-1000px] duration-[0.7s]"
       }
+      
     >
       <div className="flex flex-col items-center gap-2">
         {id && (
