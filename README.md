@@ -4,7 +4,7 @@
 ```
 git clone https://github.com/Challenge-Hotelinking/Frontend-hotelinking.git
 ```
-2. Instalar todas las dependecias del proyecto
+2. Dirigirse dentro de la carpeta "challenge" e instalar todas las dependecias del proyecto
 
 ```
 npm install o npm i
