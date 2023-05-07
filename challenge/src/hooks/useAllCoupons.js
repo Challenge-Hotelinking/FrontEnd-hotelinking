@@ -6,7 +6,7 @@ const useAllCoupons = async(id) => {
             `http://localhost:8000/api/getAllCodes/${id}`,
             { withCredentials: true }
           );
-          return response.data
+          return response.data.discountCodes
     } catch (error) {
         
     }

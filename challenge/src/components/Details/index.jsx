@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import UseAnimations from "react-useanimations";
 import { useSelector } from "react-redux";
+import { toast } from "sonner";
 import { useEffect, useState } from "react";
 import arrow from "react-useanimations/lib/arrowDown";
 import useAllCoupons from "../../hooks/useAllCoupons";
 import Card from "../../commons/Card";
-import { toast } from "sonner";
 import useChangeState from "../../hooks/useChangeState";
 const Details = () => {
   const [productsWithCode, setProductsWithCode] = useState([]);
@@ -20,11 +20,13 @@ const Details = () => {
     fetchData();
   }, []);
 
-  const couponRedeemed = (id, idUser) => {
-    useChangeState(id, idUser);
-    toast.success("Codigo canjeado con éxito!!", {
-      description: "Disfrute de su descuento",
-    });
+  const couponRedeemed = async(id, idUser) => {
+    const message = await useChangeState(id, idUser);
+    if (message) {
+      return toast.success(message, {
+        description: "Disfrute de su descuento",
+      });
+    }
   };
   return (
     <div className="p-[15px]">

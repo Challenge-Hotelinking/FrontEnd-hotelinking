@@ -6,6 +6,7 @@ const useChangeState = async (id, idUser) => {
       `http://localhost:8000/api/changeStateCode/${id}/${idUser}`,
       { withCredentials: true }
     );
+    return response.data.message
   } catch (error) {
     console.log(error);
   }
