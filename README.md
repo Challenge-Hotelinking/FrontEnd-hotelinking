@@ -10,6 +10,9 @@ git clone https://github.com/Challenge-Hotelinking/Frontend-hotelinking.git
 npm install o npm i
 ```
 3. Inicie el servidor.
+```
+npm run dev
+```
 ## Próximos pasos
 
 Ponemos el servidor en línea en el puerto 5173 
